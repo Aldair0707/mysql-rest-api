@@ -17,7 +17,7 @@ jobs:
       - run: touch .env
       - run: echo 'DEV_DATABASE_URL=${{secrets.MYSQL_CONN}}' >> .env
       - run: cat .env
-      - run: docker build -t aldair07/pg-restapi:${{github.sha}} .
+      - run: docker build -t aldair07/mysql-api:${{github.sha}} .
       - run: docker images
    
       - name: docker login
